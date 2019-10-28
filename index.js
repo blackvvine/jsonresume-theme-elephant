@@ -36,6 +36,29 @@ function render(resume) {
     resume.basics.top_five_profiles = resume.basics.profiles.slice(0, 5);
     resume.basics.remaining_profiles = resume.basics.profiles.slice(5);
 
+    resume.projects.forEach(work_info => {
+        const start_date = moment(work_info.startDate, 'YYYY-MM-DD');
+        const end_date = moment(work_info.endDate, 'YYYY-MM-DD');
+        const can_calculate_period = start_date.isValid() && end_date.isValid();
+
+        if (can_calculate_period) {
+            work_info.duration = moment.preciseDiff(start_date, end_date);
+        }
+
+        if (start_date.isValid()) {
+          work_info.startDate = utils.getFormattedDate(start_date);
+        }
+
+        if (end_date.isValid()) {
+          work_info.endDate = utils.getFormattedDate(end_date);
+        }
+
+        work_info.summary = convertMarkdown(work_info.summary);
+
+        work_info.highlights = _(work_info.highlights)
+            .map(highlight => convertMarkdown(highlight));
+    });
+
     resume.work.forEach(work_info => {
         const start_date = moment(work_info.startDate, 'YYYY-MM-DD');
         const end_date = moment(work_info.endDate, 'YYYY-MM-DD');

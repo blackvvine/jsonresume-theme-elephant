@@ -1,6 +1,6 @@
 {
-  "name": "jsonresume-theme-elegant",
-  "version": "1.13.1",
+  "name": "jsonresume-theme-elephant",
+  "version": "1.0.0",
   "description": "Elegant theme for jsonresume",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant.git"
+    "url": "https://github.com/blackvvine/jsonresume-theme-elephant.git"
   },
   "keywords": [
     "jsonresume",
     "theme",
     "elegant"
   ],
-  "author": "Mudassir Ali <mudassir.dev@gmail.com>",
+  "author": "Iman Akbari <imakbari@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mudassir0909/jsonresume-theme-elegant/issues"
+    "url": "https://github.com/blackvvine/jsonresume-theme-elephant/issues"
   },
-  "homepage": "https://github.com/mudassir0909/jsonresume-theme-elegant",
+  "homepage": "https://github.com/blackvvine/jsonresume-theme-elephant",
   "dependencies": {
     "gravatar": "^1.0.6",
     "handlebars": "^4.0.11",
@@ -28,7 +28,8 @@
     "markdown-it": "^6.0.1",
     "markdown-it-abbr": "^1.0.3",
     "moment": "^2.22.2",
-    "pug": "^2.0.0-beta6",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
     "resume-schema": "0.0.16",
     "tarball-extract": "0.0.3",
     "underscore": "^1.6.0"
