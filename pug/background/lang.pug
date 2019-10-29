@@ -1,0 +1,20 @@
+unless _.isEmpty(resume.languages)
+  .detail#languages
+    .icon
+      i.fas.fa-language(style={"font-size": "1.25em"})
+      span.mobile-title Languages
+
+    .info
+      h4.title.text-uppercase Languages
+
+      .content
+        ul.list-unstyled.clear-margin
+          each interest in resume.languages
+            li.card.card-nested
+              p
+                strong= interest.name
+
+              unless _.isEmpty(interest.keywords)
+                .space-top.labels
+                  each keyword in interest.keywords
+                    span.label.label-keyword= keyword

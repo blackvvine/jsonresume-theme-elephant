@@ -240,6 +240,10 @@
   content: "\e608";
 }
 
+.icon-earth:before {
+  content: "\e9ca"
+}
+
 .relative {
   position: relative;
 }
@@ -991,3 +995,4 @@ body {
     page-break-before: always;
   }
 }
+

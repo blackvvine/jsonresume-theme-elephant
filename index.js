@@ -36,7 +36,7 @@ function render(resume) {
     resume.basics.top_five_profiles = resume.basics.profiles.slice(0, 5);
     resume.basics.remaining_profiles = resume.basics.profiles.slice(5);
 
-    resume.projects.forEach(work_info => {
+    resume.projects.concat(resume.teaching).forEach(work_info => {
         const start_date = moment(work_info.startDate, 'YYYY-MM-DD');
         const end_date = moment(work_info.endDate, 'YYYY-MM-DD');
         const can_calculate_period = start_date.isValid() && end_date.isValid();

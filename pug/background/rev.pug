@@ -1,0 +1,21 @@
+unless _.isEmpty(resume.externalreview)
+  .detail#rev
+    .icon
+      i.fas.fa-glasses(style={"font-size": "1.25em"})
+      span.mobile-title External Reviewer
+
+    .info
+      h4.title.text-uppercase External Reviewer
+
+      .content
+        ul.list-unstyled.clear-margin
+          each interest in resume.externalreview
+            li.card.card-nested
+              p
+                strong= interest.name
+
+              unless _.isEmpty(interest.keywords)
+                .space-top.labels
+                  each keyword in interest.keywords
+                    span.label.label-keyword= keyword
+
